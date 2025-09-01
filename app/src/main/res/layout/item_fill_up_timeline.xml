@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:paddingHorizontal="16dp"
+    android:paddingVertical="8dp">
+
+    <!-- Timeline Line and Dot -->
+    <LinearLayout
+        android:layout_width="24dp"
+        android:layout_height="match_parent"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <View
+            android:id="@+id/lineTop"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary" />
+
+        <View
+            android:id="@+id/dot"
+            android:layout_width="12dp"
+            android:layout_height="12dp"
+            android:background="@drawable/timeline_dot" />
+
+        <View
+            android:id="@+id/lineBottom"
+            android:layout_width="2dp"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:background="?attr/colorPrimary" />
+
+    </LinearLayout>
+
+    <!-- Content -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        app:cardElevation="2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <!-- Date -->
+            <TextView
+                android:id="@+id/dateText"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textAppearance="?attr/textAppearanceSubtitle1"
+                android:textColor="?attr/colorPrimary"
+                tools:text="Jan 1, 2024" />
+
+            <!-- Stats Grid -->
+            <GridLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:columnCount="2"
+                android:rowCount="2">
+
+                <!-- Odometer -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/odometer_reading"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="?android:textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/odometerText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="end"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    tools:text="1,234 km" />
+
+                <!-- Fuel -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/liters_filled"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="?android:textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/litersText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="end"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    tools:text="45.5 L" />
+
+                <!-- Mileage -->
+                <TextView
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:text="@string/mileage"
+                    android:textAppearance="?attr/textAppearanceCaption"
+                    android:textColor="?android:textColorSecondary" />
+
+                <TextView
+                    android:id="@+id/mileageText"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_columnWeight="1"
+                    android:gravity="end"
+                    android:textAppearance="?attr/textAppearanceBody2"
+                    android:textColor="?attr/colorPrimary"
+                    tools:text="12.5 km/L" />
+
+            </GridLayout>
+
+        </LinearLayout>
+
+    </com.google.android.material.card.MaterialCardView>
+
+</LinearLayout>

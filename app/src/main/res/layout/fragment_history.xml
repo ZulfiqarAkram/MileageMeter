@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <!-- Vehicle Selector -->
+    <com.google.android.material.textfield.TextInputLayout
+        android:id="@+id/vehicleLayout"
+        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox.ExposedDropdownMenu"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:hint="@string/select_vehicle">
+
+        <AutoCompleteTextView
+            android:id="@+id/vehicleDropdown"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <!-- Empty State for No Vehicles -->
+    <TextView
+        android:id="@+id/emptyStateText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="@string/no_vehicles_message"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- Empty State for No Fill-ups -->
+    <TextView
+        android:id="@+id/noDataText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="16dp"
+        android:gravity="center"
+        android:text="@string/no_fill_ups_message"
+        android:textAppearance="?attr/textAppearanceBody1"
+        android:visibility="gone"
+        tools:visibility="visible" />
+
+    <!-- Fill-ups Timeline -->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/fillUpsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:clipToPadding="false"
+        android:paddingVertical="8dp"
+        tools:listitem="@layout/item_fill_up_timeline" />
+
+</LinearLayout>
