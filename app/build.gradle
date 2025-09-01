@@ -1,13 +1,14 @@
 plugins {
     alias(libs.plugins.android.application)
+    alias(libs.plugins.navigation.safe.args)
 }
 
 android {
-    namespace 'com.example.mileagemeter'
+    namespace 'com.zulfiqar.mileagemeter'
     compileSdk 36
 
     defaultConfig {
-        applicationId "com.example.mileagemeter"
+        applicationId "com.zulfiqar.mileagemeter"
         minSdk 29
         targetSdk 36
         versionCode 1
@@ -18,8 +19,10 @@ android {
 
     buildTypes {
         release {
-            minifyEnabled false
+            minifyEnabled true
+            shrinkResources true
             proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+            signingConfig signingConfigs.debug // Remove this line when creating actual release
         }
     }
     compileOptions {
@@ -38,6 +41,9 @@ dependencies {
     implementation libs.constraintlayout
     implementation libs.navigation.fragment
     implementation libs.navigation.ui
+    implementation libs.swiperefreshlayout
+    implementation libs.mpandroidchart
+    implementation libs.splashscreen
     
     // Room dependencies
     implementation libs.room.runtime

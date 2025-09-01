@@ -3,22 +3,122 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/nav_graph"
-    app:startDestination="@id/FirstFragment">
+    app:startDestination="@id/navigation_dashboard">
 
+    <!-- Dashboard Tab -->
     <fragment
-        android:id="@+id/FirstFragment"
-        android:name="com.example.mileagemeter.FirstFragment"
-        android:label="@string/first_fragment_label"
-        tools:layout="@layout/fragment_first">
+        android:id="@+id/navigation_dashboard"
+        android:name="com.zulfiqar.mileagemeter.ui.DashboardFragment"
+        android:label="@string/title_dashboard"
+        tools:layout="@layout/fragment_dashboard">
 
         <action
-            android:id="@+id/action_FirstFragment_to_vehicleSetupFragment"
+            android:id="@+id/action_navigation_dashboard_to_vehicleSetupFragment"
+            app:destination="@id/vehicleSetupFragment" />
+            
+        <action
+            android:id="@+id/action_navigation_dashboard_to_fillUpHistoryFragment"
+            app:destination="@id/fillUpHistoryFragment" />
+
+        <action
+            android:id="@+id/action_navigation_dashboard_to_reportsFragment"
+            app:destination="@id/reportsFragment" />
+
+        <action
+            android:id="@+id/action_navigation_dashboard_to_vehicleSettingsFragment"
+            app:destination="@id/vehicleSettingsFragment" />
+            
+        <action
+            android:id="@+id/action_navigation_dashboard_to_fillUpEntryFragment"
+            app:destination="@id/fillUpEntryFragment"
+            app:popUpTo="@id/navigation_dashboard"
+            app:popUpToInclusive="false" />
+    </fragment>
+
+    <!-- History Tab -->
+    <fragment
+        android:id="@+id/navigation_history"
+        android:name="com.zulfiqar.mileagemeter.ui.HistoryFragment"
+        android:label="@string/title_history"
+        tools:layout="@layout/fragment_history">
+        
+        <action
+            android:id="@+id/action_navigation_history_to_fillUpEntryFragment"
+            app:destination="@id/fillUpEntryFragment"
+            app:popUpTo="@id/navigation_history"
+            app:popUpToInclusive="false" />
+
+        <argument
+            android:name="selectedVehicleId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+
+        <deepLink
+            android:id="@+id/deeplink_history"
+            app:uri="mileagemeter://history/{selectedVehicleId}" />
+    </fragment>
+
+    <!-- Vehicles Tab -->
+    <fragment
+        android:id="@+id/navigation_vehicles"
+        android:name="com.zulfiqar.mileagemeter.ui.VehiclesFragment"
+        android:label="@string/title_vehicles"
+        tools:layout="@layout/fragment_vehicles">
+        
+        <action
+            android:id="@+id/action_navigation_vehicles_to_vehicleSetupFragment"
             app:destination="@id/vehicleSetupFragment" />
     </fragment>
 
+    <!-- About Tab -->
+    <fragment
+        android:id="@+id/navigation_about"
+        android:name="com.zulfiqar.mileagemeter.ui.AboutFragment"
+        android:label="@string/title_about"
+        tools:layout="@layout/fragment_about" />
+
+    <!-- Other Fragments -->
     <fragment
         android:id="@+id/vehicleSetupFragment"
-        android:name="com.example.mileagemeter.ui.VehicleSetupFragment"
+        android:name="com.zulfiqar.mileagemeter.ui.VehicleSetupFragment"
         android:label="@string/vehicle_setup"
-        tools:layout="@layout/fragment_vehicle_setup" />
+        tools:layout="@layout/fragment_vehicle_setup">
+        <argument
+            android:name="vehicleId"
+            app:argType="long"
+            android:defaultValue="-1L" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fillUpHistoryFragment"
+        android:name="com.zulfiqar.mileagemeter.ui.FillUpHistoryFragment"
+        android:label="@string/fill_up_history"
+        tools:layout="@layout/fragment_fill_up_history">
+
+        <action
+            android:id="@+id/action_fillUpHistoryFragment_to_fillUpEntryFragment"
+            app:destination="@id/fillUpEntryFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/fillUpEntryFragment"
+        android:name="com.zulfiqar.mileagemeter.ui.FillUpEntryFragment"
+        android:label="@string/add_fill_up"
+        tools:layout="@layout/fragment_fill_up_entry" />
+
+    <fragment
+        android:id="@+id/reportsFragment"
+        android:name="com.zulfiqar.mileagemeter.ui.ReportsFragment"
+        android:label="@string/reports"
+        tools:layout="@layout/fragment_reports" />
+
+    <fragment
+        android:id="@+id/vehicleSettingsFragment"
+        android:name="com.zulfiqar.mileagemeter.ui.VehicleSettingsFragment"
+        android:label="@string/vehicle_settings"
+        tools:layout="@layout/fragment_vehicle_settings">
+        <argument
+            android:name="vehicleId"
+            app:argType="long" />
+    </fragment>
 </navigation>

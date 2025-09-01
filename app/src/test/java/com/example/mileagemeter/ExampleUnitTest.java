@@ -1,4 +1,4 @@
-package com.example.mileagemeter;
+package com.zulfiqar.mileagemeter;
 
 import org.junit.Test;
 

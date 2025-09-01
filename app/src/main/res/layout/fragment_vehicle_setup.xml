@@ -78,13 +78,22 @@
                 android:maxLines="1" />
         </com.google.android.material.textfield.TextInputLayout>
 
+        <com.google.android.material.checkbox.MaterialCheckBox
+            android:id="@+id/activeCheckbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:checked="true"
+            android:text="@string/show_vehicle_active"
+            app:layout_constraintTop_toBottomOf="@id/fuelCapacityLayout" />
+
         <com.google.android.material.button.MaterialButton
             android:id="@+id/saveButton"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="32dp"
             android:text="@string/save_vehicle"
-            app:layout_constraintTop_toBottomOf="@id/fuelCapacityLayout" />
+            app:layout_constraintTop_toBottomOf="@id/activeCheckbox" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 </ScrollView>

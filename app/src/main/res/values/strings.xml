@@ -4,11 +4,60 @@
     
     <!-- Navigation Labels -->
     <string name="first_fragment_label">Mileage Meter</string>
+    <string name="title_dashboard">Dashboard</string>
+    <string name="title_history">History</string>
+    <string name="title_vehicles">Vehicles</string>
+    <string name="title_about">About</string>
+
+    <!-- Dashboard -->
+    <string name="last_mileage">Last Mileage</string>
+    <string name="average_mileage">Average Mileage</string>
+    <string name="monthly_fuel">Fuel Used This Month</string>
+    <string name="total_distance">Total Distance</string>
+
+    <!-- Reports -->
+    <string name="mileage">Mileage</string>
+    <string name="mileage_km_l">Mileage (km/L)</string>
+    <string name="no_fill_ups_message">No fill-ups recorded for this vehicle yet</string>
+    <string name="vehicle_icon">Vehicle Icon</string>
+    <string name="edit_vehicle">Edit Vehicle</string>
+    <string name="no_vehicles_message">No vehicles added yet. Click the + button to add one.</string>
+    
+    <!-- About Screen -->
+    <string name="app_logo">App Logo</string>
+    <string name="version_format">Version %1$s</string>
+    <string name="app_description">MileageMeter is a comprehensive vehicle mileage tracking app that helps you monitor your vehicle\'s fuel efficiency. Track fill-ups, view detailed statistics, and analyze your vehicle\'s performance over time.</string>
+    <string name="key_features">Key Features</string>
+    <string name="features_list">• Multiple vehicle support\n• Easy fill-up logging\n• Automatic mileage calculation\n• Timeline view of fill-up history\n• Detailed statistics and reports\n• Data export capability\n• Beautiful Material Design UI</string>
+    <string name="developer_info">Developer</string>
+    <string name="developer_details">Developed with ❤️ by Zulfiqar Akram \nSoftware Engineer\n\nContact me for feedback, suggestions, or bug reports:</string>
+    <string name="email">Email</string>
+    <string name="github">GitHub</string>
+    <string name="fuel_consumption">Fuel Consumption</string>
+    <string name="export_csv">Export to CSV</string>
+    <string name="reports">Reports</string>
+    <string name="view_reports">View Reports</string>
+    <string name="mileage_over_time">Mileage Over Time</string>
+    <string name="fuel_by_month">Fuel Consumption by Month</string>
+    <string name="export_success">Data exported successfully</string>
+    <string name="export_failed">Failed to export data</string>
     <string name="previous">Previous</string>
     <string name="action_settings">Settings</string>
     
     <!-- Vehicle Setup -->
     <string name="vehicle_setup">Vehicle Setup</string>
+    <string name="vehicle_details">Vehicle Details</string>
+    <string name="show_vehicle_active">Show vehicle in dashboard and history</string>
+    <string name="inactive_vehicle">Hidden from dashboard and history</string>
+    <string name="save_changes">Save Changes</string>
+    <string name="data_management">Data Management</string>
+    <string name="reset_fill_up_data">Reset Fill-up Data</string>
+    <string name="delete_vehicle">Delete Vehicle</string>
+    <string name="confirm_reset">Reset all fill-up data for this vehicle?</string>
+    <string name="confirm_delete">Delete this vehicle and all its data?</string>
+    <string name="reset_success">Fill-up data reset successfully</string>
+    <string name="delete_success">Vehicle deleted successfully</string>
+    <string name="vehicle_settings">Vehicle Settings</string>
     <string name="add_vehicle">Add Vehicle</string>
     <string name="vehicle_name">Vehicle Name</string>
     <string name="number_plate">Number Plate</string>
@@ -21,6 +70,17 @@
     <string name="vehicle_type_car">Car</string>
     <string name="vehicle_type_bike">Bike</string>
     
+    <!-- Fill-Up Entry -->
+    <string name="add_fill_up">Add Fill-up</string>
+    <string name="fill_up_history">Fill-up History</string>
+    <string name="no_fill_ups">No fill-ups recorded yet.\nTap + to add your first fill-up.</string>
+    <string name="select_vehicle">Select Vehicle</string>
+    <string name="odometer_reading">Odometer Reading</string>
+    <string name="kilometers">km</string>
+    <string name="liters_filled">Liters Filled</string>
+    <string name="fill_up_date">Fill-up Date</string>
+    <string name="save_fill_up">Save Fill-up</string>
+
     <!-- Error Messages -->
     <string name="error_vehicle_name_required">Vehicle name is required</string>
     <string name="error_number_plate_required">Number plate is required</string>
@@ -28,6 +88,13 @@
     <string name="error_fuel_capacity_required">Fuel tank capacity is required</string>
     <string name="error_fuel_capacity_invalid">Please enter a valid fuel tank capacity</string>
     <string name="error_number_plate_exists">A vehicle with this number plate already exists</string>
+    <string name="error_vehicle_required">Please select a vehicle</string>
+    <string name="error_odometer_required">Odometer reading is required</string>
+    <string name="error_odometer_invalid">Please enter a valid odometer reading</string>
+    <string name="error_odometer_lower_than_previous">Odometer reading must be higher than previous fill-up</string>
+    <string name="error_liters_required">Liters filled is required</string>
+    <string name="error_liters_invalid">Please enter a valid amount of liters</string>
+    <string name="error_date_required">Fill-up date is required</string>
     
     <!-- Placeholder Text -->
     <string name="lorem_ipsum">Welcome to Mileage Meter! Add your first vehicle to get started with tracking fuel consumption and mileage.</string>
